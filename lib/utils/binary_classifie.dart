@@ -36,7 +36,7 @@ class BinaryClassifier {
           .build();
       tflp.TensorImage tensorImage;
 
-      tensorImage = tflp.TensorImage();
+      tensorImage = tflp.TensorImage(tflp.TensorBufferFloat.datatype);
       tensorImage.loadImage(decodeImage(image)!);
       tensorImage = imageProcessor.process(tensorImage);
       tflp.TensorBuffer _outputBuffer = tflp.TensorBuffer.createFixedSize(
